@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Meza - Generative AI Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        :root {
+            --primary-color: #ffffff;
+            --secondary-color: #E0E7FF; /* Light lavender for text */
+            --background-start: #0f172a; /* Dark Slate Blue */
+            --background-end: #1e293b;   /* Slightly lighter Slate */
+            --card-background: rgba(30, 41, 59, 0.7);
+            --accent-color: #16a34a;     /* Professional Green */
+            --border-color: rgba(22, 163, 74, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--background-start), var(--background-end));
+            color: var(--primary-color);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header / Hero Section --- */
+        .hero {
+            text-align: center;
+            padding: 100px 0 80px;
+            background: linear-gradient(135deg, var(--background-end), var(--background-start));
+        }
+
+        .hero h1 {
+            display: inline-block;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            padding: 15px 30px;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            font-weight: 300;
+            color: var(--secondary-color);
+        }
+
+        /* --- General Section Styling --- */
+        .section {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 50px;
+            position: relative;
+            color: var(--primary-color);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        /* --- About Me & Course Section --- */
+        .about-card {
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .about-card p {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* --- Submissions Section --- */
+        .submissions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .submission-card {
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .submission-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .submission-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .submission-card .week-number {
+            font-size: 0.9rem;
+            font-weight: 300;
+            color: var(--accent-color);
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .submission-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--accent-color);
+            color: var(--background-start);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .submission-link:hover {
+            background-color: #22c55e;
+            box-shadow: 0 0 15px rgba(34, 197, 94, 0.6);
+        }
+        
+        /* --- Footer --- */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: var(--background-start);
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+        
+        .footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer a:hover {
+            color: var(--primary-color);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Victor Meza</h1>
+            <p>A Portfolio for the Generative AI for Work & Research Course</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="about-me" class="section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-card">
+                    <p>
+                        [cite_start]I am a dedicated undergraduate student at the University of California, Davis, pursuing a Bachelor of Science in International Agriculture Development[cite: 6, 7]. [cite_start]My experience includes running a successful online plant business, 'Plants4You,' with over 500 sales [cite: 18, 20][cite_start], and volunteering at the Knights Landing One Health Center, where I've assisted as a Tagalog interpreter[cite: 13, 17]. [cite_start]I am proficient with Microsoft Office and enjoy leveraging technology to improve efficiency, as demonstrated by my work in creating a tracking system that decreased shipping costs by 15%[cite: 11, 24].
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-course" class="section">
+            <div class="container">
+                <h2 class="section-title">About the Course</h2>
+                <div class="about-card">
+                    <p>
+                        [cite_start]This portfolio showcases my work from "Generative AI for Work & Research Productivity," an 8-week course by The GRAPH Courses[cite: 34, 36]. [cite_start]The curriculum focuses on using no-code AI tools to automate tasks and enhance productivity[cite: 35]. [cite_start]The course covers a range of topics from creating documents and presentations with AI assistants to building custom chatbots and automating complex data analysis workflows[cite: 63, 73, 100].
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="submissions" class="section">
+            <div class="container">
+                <h2 class="section-title">My Weekly Submissions</h2>
+                <div class="submissions-grid">
+                    
+                    <div class="submission-card">
+                        <div>
+                           <span class="week-number">Module 01</span>
+                           [cite_start]<h3>Websites, Documents & Presentations [cite: 62]</h3>
+                        </div>
+                        <a href="#" class="submission-link">View Project</a>
+                    </div>
+                    
+                    <div class="submission-card">
+                        <div>
+                           <span class="week-number">Module 02</span>
+                           [cite_start]<h3>AI-Automated Data Analysis [cite: 72]</h3>
+                        </div>
+                        <a href="#" class="submission-link">View Project</a>
+                    </div>
+
+                    <div class="submission-card">
+                        <div>
+                           <span class="week-number">Module 03</span>
+                           [cite_start]<h3>GenAI for Research & Text Analysis [cite: 84]</h3>
+                        </div>
+                        <a href="#" class="submission-link">View Project</a>
+                    </div>
+
+                    <div class="submission-card">
+                        <div>
+                           <span class="week-number">Module 04</span>
+                           [cite_start]<h3>Custom GPTs and Chatbots [cite: 99]</h3>
+                        </div>
+                        <a href="#" class="submission-link">View Project</a>
+                    </div>
+
+                    <div class="submission-card">
+                        <div>
+                           <span class="week-number">Module 05</span>
+                           [cite_start]<h3>AI for Task Automation [cite: 110]</h3>
+                        </div>
+                        <a href="#" class="submission-link">View Project</a>
+                    </div>
+
+                    <div class="submission-card">
+                        <div>
+                           <span class="week-number">Module 06</span>
+                           [cite_start]<h3>GenAI for Communication and Outreach [cite: 120]</h3>
+                        </div>
+                        <a href="#" class="submission-link">View Project</a>
+                    </div>
+                    
+                    <div class="submission-card">
+                        <div>
+                           <span class="week-number">Module 07</span>
+                           [cite_start]<h3>Capstone Project & Showcase [cite: 132]</h3>
+                        </div>
+                        <a href="#" class="submission-link">View Project</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Victor Meza. [cite_start]Portfolio created for <a href="https://www.thegraphcourses.org" target="_blank">The GRAPH Courses</a>[cite: 43].</p>
+        </div>
+    </footer>
+
+</body>
+</html>
