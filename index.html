@@ -44,6 +44,16 @@
             background: linear-gradient(135deg, var(--background-end), var(--background-start));
         }
 
+        .profile-avatar {
+            width: 150px; /* Adjust size as needed */
+            height: 150px; /* Adjust size as needed */
+            border-radius: 50%; /* Makes the image circular */
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+            border: 4px solid var(--accent-color); /* Green border around the avatar */
+            margin-bottom: 30px;
+            box-shadow: 0 0 20px rgba(22, 163, 74, 0.4); /* Subtle glow effect */
+        }
+
         .hero h1 {
             display: inline-block;
             font-size: 2.5rem;
@@ -177,118 +187,3 @@
         
         .footer a {
             color: var(--accent-color);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        .footer a:hover {
-            color: var(--primary-color);
-        }
-
-    </style>
-</head>
-<body>
-
-    <header class="hero">
-        <div class="container">
-            <h1>Victor Meza</h1>
-            <p>A Portfolio for the Generative AI for Work & Research Course</p>
-        </div>
-    </header>
-
-    <main>
-        <section id="about-me" class="section">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-card">
-                    <p>
-                        [cite_start]I am a dedicated undergraduate student at the University of California, Davis, pursuing a Bachelor of Science in International Agriculture Development[cite: 6, 7]. [cite_start]My experience includes running a successful online plant business, 'Plants4You,' with over 500 sales [cite: 18, 20][cite_start], and volunteering at the Knights Landing One Health Center, where I've assisted as a Tagalog interpreter[cite: 13, 17]. [cite_start]I am proficient with Microsoft Office and enjoy leveraging technology to improve efficiency, as demonstrated by my work in creating a tracking system that decreased shipping costs by 15%[cite: 11, 24].
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section id="about-course" class="section">
-            <div class="container">
-                <h2 class="section-title">About the Course</h2>
-                <div class="about-card">
-                    <p>
-                        [cite_start]This portfolio showcases my work from "Generative AI for Work & Research Productivity," an 8-week course by The GRAPH Courses[cite: 34, 36]. [cite_start]The curriculum focuses on using no-code AI tools to automate tasks and enhance productivity[cite: 35]. [cite_start]The course covers a range of topics from creating documents and presentations with AI assistants to building custom chatbots and automating complex data analysis workflows[cite: 63, 73, 100].
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section id="submissions" class="section">
-            <div class="container">
-                <h2 class="section-title">My Weekly Submissions</h2>
-                <div class="submissions-grid">
-                    
-                    <div class="submission-card">
-                        <div>
-                           <span class="week-number">Module 01</span>
-                           [cite_start]<h3>Websites, Documents & Presentations [cite: 62]</h3>
-                        </div>
-                        <a href="#" class="submission-link">View Project</a>
-                    </div>
-                    
-                    <div class="submission-card">
-                        <div>
-                           <span class="week-number">Module 02</span>
-                           [cite_start]<h3>AI-Automated Data Analysis [cite: 72]</h3>
-                        </div>
-                        <a href="#" class="submission-link">View Project</a>
-                    </div>
-
-                    <div class="submission-card">
-                        <div>
-                           <span class="week-number">Module 03</span>
-                           [cite_start]<h3>GenAI for Research & Text Analysis [cite: 84]</h3>
-                        </div>
-                        <a href="#" class="submission-link">View Project</a>
-                    </div>
-
-                    <div class="submission-card">
-                        <div>
-                           <span class="week-number">Module 04</span>
-                           [cite_start]<h3>Custom GPTs and Chatbots [cite: 99]</h3>
-                        </div>
-                        <a href="#" class="submission-link">View Project</a>
-                    </div>
-
-                    <div class="submission-card">
-                        <div>
-                           <span class="week-number">Module 05</span>
-                           [cite_start]<h3>AI for Task Automation [cite: 110]</h3>
-                        </div>
-                        <a href="#" class="submission-link">View Project</a>
-                    </div>
-
-                    <div class="submission-card">
-                        <div>
-                           <span class="week-number">Module 06</span>
-                           [cite_start]<h3>GenAI for Communication and Outreach [cite: 120]</h3>
-                        </div>
-                        <a href="#" class="submission-link">View Project</a>
-                    </div>
-                    
-                    <div class="submission-card">
-                        <div>
-                           <span class="week-number">Module 07</span>
-                           [cite_start]<h3>Capstone Project & Showcase [cite: 132]</h3>
-                        </div>
-                        <a href="#" class="submission-link">View Project</a>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Victor Meza. [cite_start]Portfolio created for <a href="https://www.thegraphcourses.org" target="_blank">The GRAPH Courses</a>[cite: 43].</p>
-        </div>
-    </footer>
-
-</body>
-</html>
