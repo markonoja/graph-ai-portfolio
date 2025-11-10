@@ -16,7 +16,7 @@
             --background-start: #0f172a; /* Dark Slate Blue */
             --background-end: #1e293b;   /* Slightly lighter Slate */
             --card-background: rgba(30, 41, 59, 0.7);
-            --accent-color: #16a34a;     /* Professional Green */
+            --accent-color: #16a34a;   /* Professional Green */
             --border-color: rgba(22, 163, 74, 0.2);
         }
 
@@ -179,6 +179,21 @@
             box-shadow: 0 0 15px rgba(34, 197, 94, 0.6);
         }
         
+        /* --- NEW CONTACT FORM STYLING --- */
+        .form-container {
+            text-align: center; /* Center the iframe wrapper */
+            margin: 0 auto;
+        }
+
+        .form-container iframe {
+            max-width: 100%; /* Make it responsive */
+            width: 700px;    /* Max width */
+            height: 900px;   /* Increased height to avoid scrollbar */
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            background: var(--card-background); /* Provide a background just in case */
+        }
+        
         /* --- Footer --- */
         .footer {
             text-align: center;
@@ -215,7 +230,7 @@
                 <h2 class="section-title">About Me</h2>
                 <div class="about-card">
                     <p>
-                        [cite_start]I am a dedicated undergraduate student at the University of California, Davis, pursuing a Bachelor of Science in International Agriculture Development[cite: 6, 7]. [cite_start]My experience includes running a successful online plant business, 'Plants4You,' with over 500 sales [cite: 18, 20][cite_start], and volunteering at the Knights Landing One Health Center, where I've assisted as a Tagalog interpreter[cite: 13, 17]. [cite_start]I am proficient with Microsoft Office and enjoy leveraging technology to improve efficiency, as demonstrated by my work in creating a tracking system that decreased shipping costs by 15%[cite: 11, 24].
+                        I am a dedicated undergraduate student at the University of California, Davis, pursuing a Bachelor of Science in International Agriculture Development. My experience includes running a successful online plant business, 'Plants4You,' with over 500 sales, and volunteering at the Knights Landing One Health Center, where I've assisted as a Tagalog interpreter. I am proficient with Microsoft Office and enjoy leveraging technology to improve efficiency, as demonstrated by my work in creating a tracking system that decreased shipping costs by 15%.
                     </p>
                 </div>
             </div>
@@ -226,7 +241,7 @@
                 <h2 class="section-title">About the Course</h2>
                 <div class="about-card">
                     <p>
-                        [cite_start]This portfolio showcases my work from "Generative AI for Work & Research Productivity," an 8-week course by The GRAPH Courses[cite: 34, 36]. [cite_start]The curriculum focuses on using no-code AI tools to automate tasks and enhance productivity[cite: 35]. [cite_start]The course covers a range of topics from creating documents and presentations with AI assistants to building custom chatbots and automating complex data analysis workflows[cite: 63, 73, 100].
+                        This portfolio showcases my work from "Generative AI for Work & Research Productivity," an 8-week course by The GRAPH Courses. The curriculum focuses on using no-code AI tools to automate tasks and enhance productivity. The course covers a range of topics from creating documents and presentations with AI assistants to building custom chatbots and automating complex data analysis workflows.
                     </p>
                 </div>
             </div>
@@ -240,7 +255,7 @@
                     <div class="submission-card">
                         <div>
                            <span class="week-number">Module 01</span>
-                           [cite_start]<h3>Websites, Documents & Presentations [cite: 62]</h3>
+                           <h3>Websites, Documents & Presentations</h3>
                         </div>
                         <a href="#" class="submission-link">View Project</a>
                     </div>
@@ -257,7 +272,7 @@
                     <div class="submission-card">
                         <div>
                            <span class="week-number">Module 03</span>
-                           [cite_start]<h3>GenAI for Research & Text Analysis [cite: 84]</h3>
+                           <h3>GenAI for Research & Text Analysis</h3>
                         </div>
                         <a href="#" class="submission-link">View Project</a>
                     </div>
@@ -265,7 +280,7 @@
                     <div class="submission-card">
                         <div>
                            <span class="week-number">Module 04</span>
-                           [cite_start]<h3>Custom GPTs and Chatbots [cite: 99]</h3>
+                           <h3>Custom GPTs and Chatbots</h3>
                         </div>
                         <a href="#" class="submission-link">View Project</a>
                     </div>
@@ -273,7 +288,7 @@
                     <div class="submission-card">
                         <div>
                            <span class="week-number">Module 05</span>
-                           [cite_start]<h3>AI for Task Automation [cite: 110]</h3>
+                           <h3>AI for Task Automation</h3>
                         </div>
                         <a href="#" class="submission-link">View Project</a>
                     </div>
@@ -281,7 +296,7 @@
                     <div class="submission-card">
                         <div>
                            <span class="week-number">Module 06</span>
-                           [cite_start]<h3>GenAI for Communication and Outreach [cite: 120]</h3>
+                           <h3>GenAI for Communication and Outreach</h3>
                         </div>
                         <a href="#" class="submission-link">View Project</a>
                     </div>
@@ -289,7 +304,7 @@
                     <div class="submission-card">
                         <div>
                            <span class="week-number">Module 07</span>
-                           [cite_start]<h3>Capstone Project & Showcase [cite: 132]</h3>
+                           <h3>Capstone Project & Showcase</h3>
                         </div>
                         <a href="#" class="submission-link">View Project</a>
                     </div>
@@ -297,11 +312,27 @@
                 </div>
             </div>
         </section>
-    </main>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Contact for Consultation 💬</h2>
+                <div class="form-container">
+                    <iframe 
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSc3zl_NjBbYjTaWOt2_hqO-HnpEJHsP-5Tqvb6jQAE_-tlGfg/viewform?embedded=true" 
+                        width="100%" 
+                        height="900" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0"
+                    >Loading…</iframe>
+                </div>
+            </div>
+        </section>
+        </main>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Mark Onoja. [cite_start]Portfolio created for <a href="https://www.thegraphcourses.org" target="_blank">The GRAPH Courses</a>[cite: 43].</p>
+            <p>&copy; 2025 Mark Onoja. Portfolio created for <a href="https://www.thegraphcourses.org" target="_blank">The GRAPH Courses</a>.</p>
         </div>
     </footer>
 
