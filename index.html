@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2025/11/03/21/20251103212505-KYVJVAYR.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mark Onoja - Generative AI Portfolio</title>
+    <title>Mark Onoja - Data Science & AI Portfolio</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
@@ -48,13 +45,13 @@
         }
 
         .profile-avatar {
-            width: 150px; /* Adjust size as needed */
-            height: 150px; /* Adjust size as needed */
-            border-radius: 50%; /* Makes the image circular */
-            object-fit: cover; /* Ensures the image covers the area without distortion */
-            border: 4px solid var(--accent-color); /* Green border around the avatar */
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent-color);
             margin-bottom: 30px;
-            box-shadow: 0 0 20px rgba(22, 163, 74, 0.4); /* Subtle glow effect */
+            box-shadow: 0 0 20px rgba(22, 163, 74, 0.4);
         }
 
         .hero h1 {
@@ -123,6 +120,60 @@
             margin: 0 auto;
         }
 
+        /* --- Experience & Education Section --- */
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .experience-card {
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .experience-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .experience-card .date {
+            font-size: 0.9rem;
+            font-weight: 300;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .experience-card ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .experience-card li {
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .experience-card li:before {
+            content: "▸";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+        }
+
         /* --- Submissions Section --- */
         .submissions-grid {
             display: grid;
@@ -179,19 +230,19 @@
             box-shadow: 0 0 15px rgba(34, 197, 94, 0.6);
         }
         
-        /* --- NEW CONTACT FORM STYLING --- */
+        /* --- CONTACT FORM STYLING --- */
         .form-container {
-            text-align: center; /* Center the iframe wrapper */
+            text-align: center;
             margin: 0 auto;
         }
 
         .form-container iframe {
-            max-width: 100%; /* Make it responsive */
-            width: 700px;    /* Max width */
-            height: 900px;   /* Increased height to avoid scrollbar */
+            max-width: 100%;
+            width: 700px;
+            height: 900px;
             border: 1px solid var(--border-color);
             border-radius: 12px;
-            background: var(--card-background); /* Provide a background just in case */
+            background: var(--card-background);
         }
         
         /* --- Footer --- */
@@ -211,7 +262,6 @@
         .footer a:hover {
             color: var(--primary-color);
         }
-
     </style>
 </head>
 <body>
@@ -220,7 +270,7 @@
         <div class="container">
             <img src="https://github.com/markonoja/graph-ai-portfolio/blob/main/My%20Passport%20-%20smallest1112.jpg?raw=true" alt="Mark Onoja Profile Avatar" class="profile-avatar">
             <h1>Mark Onoja</h1>
-            <p>A Portfolio for the Generative AI for Work & Research Course</p>
+            <p>Data Science Professional | M&E Specialist | AI Enthusiast</p>
         </div>
     </header>
 
@@ -230,8 +280,68 @@
                 <h2 class="section-title">About Me</h2>
                 <div class="about-card">
                     <p>
-                        I am a dedicated undergraduate student at the University of California, Davis, pursuing a Bachelor of Science in International Agriculture Development. My experience includes running a successful online plant business, 'Plants4You,' with over 500 sales, and volunteering at the Knights Landing One Health Center, where I've assisted as a Tagalog interpreter. I am proficient with Microsoft Office and enjoy leveraging technology to improve efficiency, as demonstrated by my work in creating a tracking system that decreased shipping costs by 15%.
+                        I am a versatile data professional with expertise in data analysis, monitoring & evaluation, and health data analytics. Currently pursuing a Master's in Data Science Management at Rome Business School, I have extensive experience working with organizations to improve data quality, implement monitoring systems, and leverage data for decision-making. My technical skills include Python, R, QGIS, SQL, and various data analytics platforms.
                     </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="experience-grid">
+                    <div class="experience-card">
+                        <h3>Technical Specialist, M&E</h3>
+                        <span class="date">Jan 2022 - Present</span>
+                        <ul>
+                            <li>Supervise regular monitoring and evaluation activities across implementing entities</li>
+                            <li>Build and sustain strategic relationships with key stakeholders</li>
+                            <li>Analyze data from assigned SDFs to improve data quality</li>
+                            <li>Conduct quality assurance training on monitoring & evaluation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="experience-card">
+                        <h3>Technical Officer, M&E</h3>
+                        <span class="date">Jan 2020 - Jan 2022</span>
+                        <ul>
+                            <li>Assisted in implementation of S.I activities at state level</li>
+                            <li>Ensured data reporting at different levels using standard tools and indicators</li>
+                            <li>Participated in activities to ensure data quality and best practices</li>
+                            <li>Responsible for monthly data exports from EMR at site level</li>
+                            <li>Participated in site monitoring, supervision, and capacity building</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <div class="container">
+                <h2 class="section-title">Education & Certifications</h2>
+                <div class="experience-grid">
+                    <div class="experience-card">
+                        <h3>Rome Business School, Nigeria</h3>
+                        <span class="date">2024-2025</span>
+                        <p>Masters in Data Science Management</p>
+                    </div>
+                    
+                    <div class="experience-card">
+                        <h3>Benue State University, Makurdi</h3>
+                        <span class="date">2003-2007</span>
+                        <p>B.Sc. Chemistry</p>
+                    </div>
+                    
+                    <div class="experience-card">
+                        <h3>Recent Certifications</h3>
+                        <ul>
+                            <li>Generative AI for Work and Research Productivity (2025)</li>
+                            <li>Introduction to QGIS (2025)</li>
+                            <li>Python Basics & Beyond: Introduction to Health Data Analytics (2025)</li>
+                            <li>R Basics & Beyond: Introduction to Health Data Analytics (2024)</li>
+                            <li>Google Advanced Data Analytics Certificate (2024)</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -328,7 +438,7 @@
                 </div>
             </div>
         </section>
-        </main>
+    </main>
 
     <footer class="footer">
         <div class="container">
