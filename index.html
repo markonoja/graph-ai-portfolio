@@ -477,6 +477,7 @@
                         <div class="module7-links">
                             <a href="#dashboard-explanation" class="module7-link">Dashboard Explanation</a>
                             <a href="#facility-art-reporter" class="module7-link">Live Demo</a>
+                            <a href="#charts-gallery" class="module7-link">View Charts</a>
                             <a href="#code-overview" class="module7-link">View Code</a>
                             <a href="https://github.com/markonoja/facility-art-reporter" class="module7-link" target="_blank" style="background-color: #6b7280;">GitHub Repo</a>
                         </div>
@@ -508,6 +509,7 @@
                     
                     <div class="module7-links">
                         <a href="#facility-art-reporter" class="submission-link">View Analytics Product</a>
+                        <a href="#charts-gallery" class="submission-link">View Charts</a>
                         <a href="#code-overview" class="submission-link">View Code Implementation</a>
                         <a href="#submissions" class="submission-link" style="background-color: #3b82f6;">Back to Submissions</a>
                     </div>
@@ -595,7 +597,174 @@ if __name__ == "__main__":
                         <a href="https://github.com/markonoja/facility-art-reporter/blob/main/art_reporter.py" 
                            class="module7-link" target="_blank">View Full Code on GitHub</a>
                         <a href="#facility-art-reporter" class="module7-link">Live Demo</a>
+                        <a href="#charts-gallery" class="module7-link">View Charts</a>
                         <a href="#dashboard-explanation" class="module7-link" style="background-color: #3b82f6;">Dashboard Explanation</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Charts Gallery Section -->
+        <section id="charts-gallery" class="section">
+            <div class="container">
+                <h2 class="section-title">Data Visualizations</h2>
+                <div class="about-card">
+                    <h3>Facility ART Reporter Analytics</h3>
+                    <p>Interactive charts and visualizations generated from line list data using Python, Plotly, and Streamlit.</p>
+                    
+                    <!-- Chart Gallery Grid -->
+                    <div class="charts-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; margin: 30px 0;">
+                        
+                        <!-- Current ART Status Distribution -->
+                        <div class="chart-card" style="background: var(--card-background); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; text-align: center;">
+                            <h4 style="color: var(--primary-color); margin-bottom: 15px;">Current ART Status</h4>
+                            <div style="height: 300px; background: var(--background-start); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+                                <div style="text-align: center;">
+                                    <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 10px;">📊</div>
+                                    <p style="color: var(--secondary-color);">Bar chart showing patient distribution across ART status categories</p>
+                                </div>
+                            </div>
+                            <p style="color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 15px;">
+                                Visualizes the count of patients in each ART status category (Active, Lost, Transferred, etc.)
+                            </p>
+                            <div class="tech-badges">
+                                <span class="tech-badge">Plotly</span>
+                                <span class="tech-badge">Pandas</span>
+                            </div>
+                        </div>
+
+                        <!-- Age Distribution -->
+                        <div class="chart-card" style="background: var(--card-background); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; text-align: center;">
+                            <h4 style="color: var(--primary-color); margin-bottom: 15px;">Age Distribution</h4>
+                            <div style="height: 300px; background: var(--background-start); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+                                <div style="text-align: center;">
+                                    <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 10px;">👥</div>
+                                    <p style="color: var(--secondary-color);">Histogram showing patient age distribution by sex</p>
+                                </div>
+                            </div>
+                            <p style="color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 15px;">
+                                Displays age distribution with optional breakdown by gender for demographic analysis
+                            </p>
+                            <div class="tech-badges">
+                                <span class="tech-badge">Plotly</span>
+                                <span class="tech-badge">Histogram</span>
+                            </div>
+                        </div>
+
+                        <!-- Sex Distribution -->
+                        <div class="chart-card" style="background: var(--card-background); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; text-align: center;">
+                            <h4 style="color: var(--primary-color); margin-bottom: 15px;">Gender Distribution</h4>
+                            <div style="height: 300px; background: var(--background-start); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+                                <div style="text-align: center;">
+                                    <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 10px;">⚥</div>
+                                    <p style="color: var(--secondary-color);">Pie chart showing gender distribution</p>
+                                </div>
+                            </div>
+                            <p style="color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 15px;">
+                                Donut chart displaying the proportion of male and female patients in the program
+                            </p>
+                            <div class="tech-badges">
+                                <span class="tech-badge">Plotly</span>
+                                <span class="tech-badge">Pie Chart</span>
+                            </div>
+                        </div>
+
+                        <!-- Treatment Duration -->
+                        <div class="chart-card" style="background: var(--card-background); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; text-align: center;">
+                            <h4 style="color: var(--primary-color); margin-bottom: 15px;">Treatment Duration</h4>
+                            <div style="height: 300px; background: var(--background-start); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+                                <div style="text-align: center;">
+                                    <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 10px;">📈</div>
+                                    <p style="color: var(--secondary-color);">Box plot showing months on ART per regimen line</p>
+                                </div>
+                            </div>
+                            <p style="color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 15px;">
+                                Box plot visualization comparing treatment duration across different regimen lines
+                            </p>
+                            <div class="tech-badges">
+                                <span class="tech-badge">Plotly</span>
+                                <span class="tech-badge">Box Plot</span>
+                            </div>
+                        </div>
+
+                        <!-- Data Quality Overview -->
+                        <div class="chart-card" style="background: var(--card-background); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; text-align: center;">
+                            <h4 style="color: var(--primary-color); margin-bottom: 15px;">Data Quality</h4>
+                            <div style="height: 300px; background: var(--background-start); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+                                <div style="text-align: center;">
+                                    <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 10px;">✅</div>
+                                    <p style="color: var(--secondary-color);">Missing data analysis and quality metrics</p>
+                                </div>
+                            </div>
+                            <p style="color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 15px;">
+                                Data quality assessment showing missing values and duplicate record analysis
+                            </p>
+                            <div class="tech-badges">
+                                <span class="tech-badge">Pandas</span>
+                                <span class="tech-badge">Data Quality</span>
+                            </div>
+                        </div>
+
+                        <!-- Performance Metrics -->
+                        <div class="chart-card" style="background: var(--card-background); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; text-align: center;">
+                            <h4 style="color: var(--primary-color); margin-bottom: 15px;">Performance Metrics</h4>
+                            <div style="height: 300px; background: var(--background-start); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+                                <div style="text-align: center;">
+                                    <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 10px;">🎯</div>
+                                    <p style="color: var(--secondary-color);">Key performance indicators and trends</p>
+                                </div>
+                            </div>
+                            <p style="color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 15px;">
+                                Retention rates, viral suppression, and other program performance indicators
+                            </p>
+                            <div class="tech-badges">
+                                <span class="tech-badge">Metrics</span>
+                                <span class="tech-badge">KPI</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Chart Features Summary -->
+                    <div style="background: var(--background-start); padding: 25px; border-radius: 8px; margin: 30px 0; text-align: left;">
+                        <h4 style="color: var(--primary-color); margin-bottom: 15px;">Chart Features & Capabilities</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+                            <div>
+                                <h5 style="color: var(--accent-color); margin-bottom: 10px;">Interactive Elements</h5>
+                                <ul style="color: var(--secondary-color); font-size: 0.9rem;">
+                                    <li>Hover tooltips with detailed information</li>
+                                    <li>Zoom and pan functionality</li>
+                                    <li>Click to filter data</li>
+                                    <li>Responsive design</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 style="color: var(--accent-color); margin-bottom: 10px;">Data Processing</h5>
+                                <ul style="color: var(--secondary-color); font-size: 0.9rem;">
+                                    <li>Automated data cleaning</li>
+                                    <li>Real-time calculations</li>
+                                    <li>Age group categorization</li>
+                                    <li>Missing value handling</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 style="color: var(--accent-color); margin-bottom: 10px;">Export Options</h5>
+                                <ul style="color: var(--secondary-color); font-size: 0.9rem;">
+                                    <li>PNG image export</li>
+                                    <li>PDF report generation</li>
+                                    <li>CSV data export</li>
+                                    <li>Interactive HTML files</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Links -->
+                    <div class="module7-links">
+                        <a href="#facility-art-reporter" class="submission-link">Live Demo</a>
+                        <a href="#code-overview" class="submission-link">View Code</a>
+                        <a href="#dashboard-explanation" class="submission-link" style="background-color: #3b82f6;">Dashboard Explanation</a>
+                        <a href="#submissions" class="submission-link" style="background-color: #6b7280;">Back to Submissions</a>
                     </div>
                 </div>
             </div>
@@ -648,6 +817,7 @@ if __name__ == "__main__":
                     
                     <div class="module7-links">
                         <a href="#dashboard-explanation" class="submission-link">View Dashboard Explanation</a>
+                        <a href="#charts-gallery" class="submission-link">View Charts</a>
                         <a href="#code-overview" class="submission-link">View Code Implementation</a>
                         <a href="#submissions" class="submission-link" style="background-color: #3b82f6;">Back to Submissions</a>
                     </div>
