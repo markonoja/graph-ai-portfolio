@@ -269,6 +269,7 @@
             gap: 15px;
             justify-content: center;
             margin-top: 20px;
+            flex-wrap: wrap;
         }
         
         .module7-link {
@@ -283,11 +284,39 @@
             transition: all 0.3s ease;
             flex: 1;
             max-width: 200px;
+            min-width: 150px;
         }
         
         .module7-link:hover {
             background-color: #22c55e;
             box-shadow: 0 0 15px rgba(34, 197, 94, 0.6);
+        }
+
+        /* --- Code Display Styling --- */
+        .code-snippet {
+            background: var(--background-start);
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            text-align: left;
+        }
+
+        .tech-badges {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 15px 0;
+        }
+
+        .tech-badge {
+            background: var(--accent-color);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -438,15 +467,18 @@
                         <a href="#" class="submission-link">View Project</a>
                     </div>
                     
+                    <!-- Updated Module 7 Card -->
                     <div class="submission-card">
                         <div>
-                           <span class="week-number">Module 07</span>
-                           <h3>Capstone Project & Showcase</h3>
-                           <p>Facility ART Reporter - Automating weekly reports using line list data</p>
+                            <span class="week-number">Module 07</span>
+                            <h3>Capstone Project & Showcase</h3>
+                            <p>Facility ART Reporter - Automating weekly reports using line list data</p>
                         </div>
                         <div class="module7-links">
                             <a href="#dashboard-explanation" class="module7-link">Dashboard Explanation</a>
-                            <a href="#facility-art-reporter" class="module7-link">Analytics Product</a>
+                            <a href="#facility-art-reporter" class="module7-link">Live Demo</a>
+                            <a href="#code-overview" class="module7-link">View Code</a>
+                            <a href="https://github.com/markonoja/facility-art-reporter" class="module7-link" target="_blank" style="background-color: #6b7280;">GitHub Repo</a>
                         </div>
                     </div>
 
@@ -474,8 +506,97 @@
                     <h4>How It Works:</h4>
                     <p>The system takes raw line list data, processes it through automated workflows, and generates comprehensive reports with key performance indicators. This eliminates manual data entry and reduces reporting time by over 80%.</p>
                     
-                    <a href="#facility-art-reporter" class="submission-link" style="margin-top: 30px;">View Analytics Product</a>
-                    <a href="#submissions" class="submission-link" style="margin-top: 30px; background-color: #3b82f6;">Back to Submissions</a>
+                    <div class="module7-links">
+                        <a href="#facility-art-reporter" class="submission-link">View Analytics Product</a>
+                        <a href="#code-overview" class="submission-link">View Code Implementation</a>
+                        <a href="#submissions" class="submission-link" style="background-color: #3b82f6;">Back to Submissions</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Code Implementation Section -->
+        <section id="code-overview" class="section">
+            <div class="container">
+                <h2 class="section-title">Code Implementation</h2>
+                <div class="about-card">
+                    <h3>Python Implementation</h3>
+                    <p>The Facility ART Reporter is built using Python with Streamlit for the web interface, featuring automated data processing and visualization.</p>
+                    
+                    <div style="text-align: left; background: var(--background-start); padding: 20px; border-radius: 8px; margin: 20px 0;">
+                        <h4>Key Features Implemented:</h4>
+                        <ul>
+                            <li>Data preprocessing and cleaning</li>
+                            <li>Interactive filtering system</li>
+                            <li>Automated chart generation with Plotly</li>
+                            <li>Data quality assessment</li>
+                            <li>Export functionality</li>
+                        </ul>
+                        
+                        <h4>Technologies Used:</h4>
+                        <div class="tech-badges">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Streamlit</span>
+                            <span class="tech-badge">Pandas</span>
+                            <span class="tech-badge">Plotly</span>
+                            <span class="tech-badge">NumPy</span>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: left;">
+                        <h4>Sample Code Snippet - Main Application Structure:</h4>
+                        <pre class="code-snippet">
+<code style="color: var(--primary-color);">import streamlit as st
+import pandas as pd
+import plotly.express as px
+
+def main():
+    st.set_page_config(page_title="Facility ART Reporter")
+    st.title("Facility ART Reporter")
+    
+    # Data upload and processing
+    uploaded_file = st.file_uploader("Upload CSV file", type=["csv"])
+    if uploaded_file:
+        df = pd.read_csv(uploaded_file)
+        df = preprocess_data(df)
+        
+        # Interactive tabs for different analyses
+        tab1, tab2, tab3, tab4 = st.tabs(["Overview", "Demographics", "Treatment", "Data Quality"])
+        
+        with tab1:
+            render_overview(df)
+        with tab2:
+            render_demographics(df)
+        with tab3:
+            render_treatment(df)
+        with tab4:
+            render_data_quality(df)
+
+def render_treatment(df):
+    """Generate treatment-related visualizations"""
+    if "CurrentARTStatus" in df.columns:
+        status_counts = df["CurrentARTStatus"].value_counts()
+        fig = px.bar(status_counts, title="Current ART Status Distribution")
+        st.plotly_chart(fig, use_container_width=True)
+
+if __name__ == "__main__":
+    main()</code>
+                        </pre>
+                    </div>
+                    
+                    <div class="tech-badges">
+                        <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python">
+                        <img src="https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white" alt="Streamlit">
+                        <img src="https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white" alt="Pandas">
+                        <img src="https://img.shields.io/badge/Plotly-3F4F75?logo=plotly&logoColor=white" alt="Plotly">
+                    </div>
+                    
+                    <div class="module7-links">
+                        <a href="https://github.com/markonoja/facility-art-reporter/blob/main/art_reporter.py" 
+                           class="module7-link" target="_blank">View Full Code on GitHub</a>
+                        <a href="#facility-art-reporter" class="module7-link">Live Demo</a>
+                        <a href="#dashboard-explanation" class="module7-link" style="background-color: #3b82f6;">Dashboard Explanation</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -525,8 +646,9 @@
                         <button id="exportReport" style="padding: 10px 20px; background-color: var(--accent-color); color: var(--background-start); border: none; border-radius: 4px; cursor: pointer; font-weight: 600; margin-top: 15px;">Export Report</button>
                     </div>
                     
-                    <div style="margin-top: 30px;">
+                    <div class="module7-links">
                         <a href="#dashboard-explanation" class="submission-link">View Dashboard Explanation</a>
+                        <a href="#code-overview" class="submission-link">View Code Implementation</a>
                         <a href="#submissions" class="submission-link" style="background-color: #3b82f6;">Back to Submissions</a>
                     </div>
                 </div>
