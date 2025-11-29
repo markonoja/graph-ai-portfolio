@@ -318,6 +318,16 @@
             border-radius: 4px;
             font-size: 0.9rem;
         }
+
+        /* --- Chart Image Styling --- */
+        .chart-image {
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background: var(--background-start);
+        }
     </style>
 </head>
 <body>
@@ -618,14 +628,11 @@ if __name__ == "__main__":
                         <!-- Current ART Status Distribution -->
                         <div class="chart-card" style="background: var(--card-background); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; text-align: center;">
                             <h4 style="color: var(--primary-color); margin-bottom: 15px;">Current ART Status</h4>
-                            <div style="height: 300px; background: var(--background-start); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
-                                <div style="text-align: center;">
-                                    <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 10px;">📊</div>
-                                    <p style="color: var(--secondary-color);">Bar chart showing patient distribution across ART status categories</p>
-                                </div>
-                            </div>
+                            <img src="https://github.com/markonoja/facility-art-reporter/blob/main/art_status.png?raw=true" 
+                                 alt="Current ART Status Distribution" 
+                                 class="chart-image">
                             <p style="color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 15px;">
-                                Visualizes the count of patients in each ART status category (Active, Lost, Transferred, etc.)
+                                Bar chart showing patient distribution across ART status categories (Active, Lost, Transferred, etc.)
                             </p>
                             <div class="tech-badges">
                                 <span class="tech-badge">Plotly</span>
@@ -636,14 +643,11 @@ if __name__ == "__main__":
                         <!-- Age Distribution -->
                         <div class="chart-card" style="background: var(--card-background); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; text-align: center;">
                             <h4 style="color: var(--primary-color); margin-bottom: 15px;">Age Distribution</h4>
-                            <div style="height: 300px; background: var(--background-start); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
-                                <div style="text-align: center;">
-                                    <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 10px;">👥</div>
-                                    <p style="color: var(--secondary-color);">Histogram showing patient age distribution by sex</p>
-                                </div>
-                            </div>
+                            <img src="https://github.com/markonoja/facility-art-reporter/blob/main/age_distribution.png?raw=true" 
+                                 alt="Age Distribution" 
+                                 class="chart-image">
                             <p style="color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 15px;">
-                                Displays age distribution with optional breakdown by gender for demographic analysis
+                                Histogram showing patient age distribution with breakdown by gender for demographic analysis
                             </p>
                             <div class="tech-badges">
                                 <span class="tech-badge">Plotly</span>
@@ -654,14 +658,11 @@ if __name__ == "__main__":
                         <!-- Sex Distribution -->
                         <div class="chart-card" style="background: var(--card-background); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; text-align: center;">
                             <h4 style="color: var(--primary-color); margin-bottom: 15px;">Gender Distribution</h4>
-                            <div style="height: 300px; background: var(--background-start); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
-                                <div style="text-align: center;">
-                                    <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 10px;">⚥</div>
-                                    <p style="color: var(--secondary-color);">Pie chart showing gender distribution</p>
-                                </div>
-                            </div>
+                            <img src="https://github.com/markonoja/facility-art-reporter/blob/main/sex_distribution.png?raw=true" 
+                                 alt="Gender Distribution" 
+                                 class="chart-image">
                             <p style="color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 15px;">
-                                Donut chart displaying the proportion of male and female patients in the program
+                                Donut chart displaying the proportion of male and female patients in the ART program
                             </p>
                             <div class="tech-badges">
                                 <span class="tech-badge">Plotly</span>
@@ -672,14 +673,11 @@ if __name__ == "__main__":
                         <!-- Treatment Duration -->
                         <div class="chart-card" style="background: var(--card-background); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; text-align: center;">
                             <h4 style="color: var(--primary-color); margin-bottom: 15px;">Treatment Duration</h4>
-                            <div style="height: 300px; background: var(--background-start); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
-                                <div style="text-align: center;">
-                                    <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 10px;">📈</div>
-                                    <p style="color: var(--secondary-color);">Box plot showing months on ART per regimen line</p>
-                                </div>
-                            </div>
+                            <img src="https://github.com/markonoja/facility-art-reporter/blob/main/regimen_line_months.png?raw=true" 
+                                 alt="Treatment Duration" 
+                                 class="chart-image">
                             <p style="color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 15px;">
-                                Box plot visualization comparing treatment duration across different regimen lines
+                                Box plot visualization comparing months on ART across different regimen lines
                             </p>
                             <div class="tech-badges">
                                 <span class="tech-badge">Plotly</span>
@@ -687,39 +685,48 @@ if __name__ == "__main__":
                             </div>
                         </div>
 
-                        <!-- Data Quality Overview -->
+                        <!-- Top 10 Regimens -->
                         <div class="chart-card" style="background: var(--card-background); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; text-align: center;">
-                            <h4 style="color: var(--primary-color); margin-bottom: 15px;">Data Quality</h4>
-                            <div style="height: 300px; background: var(--background-start); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
-                                <div style="text-align: center;">
-                                    <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 10px;">✅</div>
-                                    <p style="color: var(--secondary-color);">Missing data analysis and quality metrics</p>
-                                </div>
-                            </div>
+                            <h4 style="color: var(--primary-color); margin-bottom: 15px;">Top 10 Regimens</h4>
+                            <img src="https://github.com/markonoja/facility-art-reporter/blob/main/06_top_10_regimens.png?raw=true" 
+                                 alt="Top 10 Regimens" 
+                                 class="chart-image">
                             <p style="color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 15px;">
-                                Data quality assessment showing missing values and duplicate record analysis
+                                Table showing the most commonly prescribed ART regimens in the facility
                             </p>
                             <div class="tech-badges">
                                 <span class="tech-badge">Pandas</span>
-                                <span class="tech-badge">Data Quality</span>
+                                <span class="tech-badge">Data Analysis</span>
                             </div>
                         </div>
 
-                        <!-- Performance Metrics -->
+                        <!-- Age Group & Sex Crosstab -->
                         <div class="chart-card" style="background: var(--card-background); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; text-align: center;">
-                            <h4 style="color: var(--primary-color); margin-bottom: 15px;">Performance Metrics</h4>
-                            <div style="height: 300px; background: var(--background-start); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
-                                <div style="text-align: center;">
-                                    <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 10px;">🎯</div>
-                                    <p style="color: var(--secondary-color);">Key performance indicators and trends</p>
-                                </div>
-                            </div>
+                            <h4 style="color: var(--primary-color); margin-bottom: 15px;">Age Group × Sex Analysis</h4>
+                            <img src="https://github.com/markonoja/facility-art-reporter/blob/main/05_age_group_sex_crosstab.png?raw=true" 
+                                 alt="Age Group Sex Crosstab" 
+                                 class="chart-image">
                             <p style="color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 15px;">
-                                Retention rates, viral suppression, and other program performance indicators
+                                Cross-tabulation analysis showing patient distribution by age group and gender
                             </p>
                             <div class="tech-badges">
-                                <span class="tech-badge">Metrics</span>
-                                <span class="tech-badge">KPI</span>
+                                <span class="tech-badge">Pandas</span>
+                                <span class="tech-badge">Crosstab</span>
+                            </div>
+                        </div>
+
+                        <!-- Numeric Summary -->
+                        <div class="chart-card" style="background: var(--card-background); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; text-align: center;">
+                            <h4 style="color: var(--primary-color); margin-bottom: 15px;">Numeric Summary</h4>
+                            <img src="https://github.com/markonoja/facility-art-reporter/blob/main/07_numeric_summary.png?raw=true" 
+                                 alt="Numeric Summary" 
+                                 class="chart-image">
+                            <p style="color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 15px;">
+                                Statistical summary of key numeric variables in the dataset (count, mean, std, etc.)
+                            </p>
+                            <div class="tech-badges">
+                                <span class="tech-badge">Pandas</span>
+                                <span class="tech-badge">Statistics</span>
                             </div>
                         </div>
 
@@ -799,83 +806,4 @@ if __name__ == "__main__":
                                 <h5>Retention Rate</h5>
                                 <p style="font-size: 1.5rem; font-weight: bold; color: var(--accent-color);">87%</p>
                             </div>
-                            <div style="background: var(--background-start); padding: 15px; border-radius: 6px;">
-                                <h5>Viral Suppression</h5>
-                                <p style="font-size: 1.5rem; font-weight: bold; color: var(--accent-color);">92%</p>
-                            </div>
-                        </div>
-                        
-                        <div style="margin: 20px 0;">
-                            <h5>Performance Trend</h5>
-                            <div style="height: 200px; background: var(--background-start); border-radius: 6px; display: flex; align-items: center; justify-content: center;">
-                                [Performance Chart Visualization]
-                            </div>
-                        </div>
-                        
-                        <button id="exportReport" style="padding: 10px 20px; background-color: var(--accent-color); color: var(--background-start); border: none; border-radius: 4px; cursor: pointer; font-weight: 600; margin-top: 15px;">Export Report</button>
-                    </div>
-                    
-                    <div class="module7-links">
-                        <a href="#dashboard-explanation" class="submission-link">View Dashboard Explanation</a>
-                        <a href="#charts-gallery" class="submission-link">View Charts</a>
-                        <a href="#code-overview" class="submission-link">View Code Implementation</a>
-                        <a href="#submissions" class="submission-link" style="background-color: #3b82f6;">Back to Submissions</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section">
-            <div class="container">
-                <h2 class="section-title">Contact for Consultation 💬</h2>
-                <div class="form-container">
-                    <iframe 
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSc3zl_NjBbYjTaWOt2_hqO-HnpEJHsP-5Tqvb6jQAE_-tlGfg/viewform?embedded=true" 
-                        width="100%" 
-                        height="900" 
-                        frameborder="0" 
-                        marginheight="0" 
-                        marginwidth="0"
-                    >Loading…</iframe>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Mark Onoja. Portfolio created for <a href="https://www.thegraphcourses.org" target="_blank">The GRAPH Courses</a>.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Simple JavaScript to handle the data processing simulation
-        document.getElementById('processData').addEventListener('click', function() {
-            const fileInput = document.getElementById('lineListUpload');
-            const reportOutput = document.getElementById('reportOutput');
-            
-            if (fileInput.files.length > 0) {
-                // Simulate processing delay
-                this.textContent = 'Processing...';
-                this.disabled = true;
-                
-                setTimeout(() => {
-                    this.textContent = 'Process Data';
-                    this.disabled = false;
-                    reportOutput.style.display = 'block';
-                    
-                    // Scroll to the report
-                    reportOutput.scrollIntoView({ behavior: 'smooth' });
-                }, 1500);
-            } else {
-                alert('Please select a file to process.');
-            }
-        });
-        
-        document.getElementById('exportReport').addEventListener('click', function() {
-            alert('Report exported successfully!');
-        });
-    </script>
-
-</body>
-</html>
+                            <div style="background: var(--background-start); padding: 15px; border-radius: 6
