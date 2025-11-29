@@ -262,6 +262,33 @@
         .footer a:hover {
             color: var(--primary-color);
         }
+        
+        /* --- Module 7 Links --- */
+        .module7-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .module7-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--accent-color);
+            color: var(--background-start);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            flex: 1;
+            max-width: 200px;
+        }
+        
+        .module7-link:hover {
+            background-color: #22c55e;
+            box-shadow: 0 0 15px rgba(34, 197, 94, 0.6);
+        }
     </style>
 </head>
 <body>
@@ -281,6 +308,7 @@
                 <div class="about-card">
                     <p>
                         I am a versatile data professional with expertise in data analysis, monitoring & evaluation, and health data analytics. With a Master's in Data Science Management from Rome Business School, I have extensive experience working with organizations to improve data quality, implement monitoring systems, and leverage data for decision-making. My technical skills include Python, R, QGIS, SQL, Excel, Power BI and Tableau.
+                    </p>
                 </div>
             </div>
         </section>
@@ -414,10 +442,93 @@
                         <div>
                            <span class="week-number">Module 07</span>
                            <h3>Capstone Project & Showcase</h3>
+                           <p>Facility ART Reporter - Automating weekly reports using line list data</p>
                         </div>
-                        <a href="#" class="submission-link">View Project</a>
+                        <div class="module7-links">
+                            <a href="#dashboard-explanation" class="module7-link">Dashboard Explanation</a>
+                            <a href="#facility-art-reporter" class="module7-link">Analytics Product</a>
+                        </div>
                     </div>
 
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Explanation Page -->
+        <section id="dashboard-explanation" class="section">
+            <div class="container">
+                <h2 class="section-title">Dashboard Explanation</h2>
+                <div class="about-card">
+                    <h3>Facility ART Reporter Dashboard</h3>
+                    <p>This dashboard is designed to automate the generation of weekly ART (Antiretroviral Therapy) reports using line list data from healthcare facilities.</p>
+                    
+                    <h4>Key Features:</h4>
+                    <ul style="text-align: left; margin: 20px 0;">
+                        <li>Automated data processing from line list exports</li>
+                        <li>Real-time performance indicators for ART programs</li>
+                        <li>Visualization of patient retention and adherence metrics</li>
+                        <li>Comparison of facility performance against targets</li>
+                        <li>Export functionality for standardized reporting</li>
+                    </ul>
+                    
+                    <h4>How It Works:</h4>
+                    <p>The system takes raw line list data, processes it through automated workflows, and generates comprehensive reports with key performance indicators. This eliminates manual data entry and reduces reporting time by over 80%.</p>
+                    
+                    <a href="#facility-art-reporter" class="submission-link" style="margin-top: 30px;">View Analytics Product</a>
+                    <a href="#submissions" class="submission-link" style="margin-top: 30px; background-color: #3b82f6;">Back to Submissions</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analytics Product Page -->
+        <section id="facility-art-reporter" class="section">
+            <div class="container">
+                <h2 class="section-title">Facility ART Reporter</h2>
+                <div class="about-card">
+                    <h3>Automated Weekly Report Generator</h3>
+                    <p>This tool processes line list data to generate comprehensive ART program reports.</p>
+                    
+                    <div style="background: var(--card-background); padding: 20px; border-radius: 8px; margin: 20px 0;">
+                        <h4>Upload Line List Data</h4>
+                        <input type="file" id="lineListUpload" style="margin: 10px 0; padding: 10px; background: var(--background-start); color: var(--primary-color); border: 1px solid var(--border-color); border-radius: 4px; width: 100%;">
+                        <button id="processData" style="padding: 10px 20px; background-color: var(--accent-color); color: var(--background-start); border: none; border-radius: 4px; cursor: pointer; font-weight: 600;">Process Data</button>
+                    </div>
+                    
+                    <div id="reportOutput" style="display: none; background: var(--card-background); padding: 20px; border-radius: 8px; margin: 20px 0;">
+                        <h4>Generated Report</h4>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 20px 0;">
+                            <div style="background: var(--background-start); padding: 15px; border-radius: 6px;">
+                                <h5>Total Patients</h5>
+                                <p style="font-size: 1.5rem; font-weight: bold; color: var(--accent-color);">1,245</p>
+                            </div>
+                            <div style="background: var(--background-start); padding: 15px; border-radius: 6px;">
+                                <h5>New Enrollments</h5>
+                                <p style="font-size: 1.5rem; font-weight: bold; color: var(--accent-color);">42</p>
+                            </div>
+                            <div style="background: var(--background-start); padding: 15px; border-radius: 6px;">
+                                <h5>Retention Rate</h5>
+                                <p style="font-size: 1.5rem; font-weight: bold; color: var(--accent-color);">87%</p>
+                            </div>
+                            <div style="background: var(--background-start); padding: 15px; border-radius: 6px;">
+                                <h5>Viral Suppression</h5>
+                                <p style="font-size: 1.5rem; font-weight: bold; color: var(--accent-color);">92%</p>
+                            </div>
+                        </div>
+                        
+                        <div style="margin: 20px 0;">
+                            <h5>Performance Trend</h5>
+                            <div style="height: 200px; background: var(--background-start); border-radius: 6px; display: flex; align-items: center; justify-content: center;">
+                                [Performance Chart Visualization]
+                            </div>
+                        </div>
+                        
+                        <button id="exportReport" style="padding: 10px 20px; background-color: var(--accent-color); color: var(--background-start); border: none; border-radius: 4px; cursor: pointer; font-weight: 600; margin-top: 15px;">Export Report</button>
+                    </div>
+                    
+                    <div style="margin-top: 30px;">
+                        <a href="#dashboard-explanation" class="submission-link">View Dashboard Explanation</a>
+                        <a href="#submissions" class="submission-link" style="background-color: #3b82f6;">Back to Submissions</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -444,6 +555,35 @@
             <p>&copy; 2025 Mark Onoja. Portfolio created for <a href="https://www.thegraphcourses.org" target="_blank">The GRAPH Courses</a>.</p>
         </div>
     </footer>
+
+    <script>
+        // Simple JavaScript to handle the data processing simulation
+        document.getElementById('processData').addEventListener('click', function() {
+            const fileInput = document.getElementById('lineListUpload');
+            const reportOutput = document.getElementById('reportOutput');
+            
+            if (fileInput.files.length > 0) {
+                // Simulate processing delay
+                this.textContent = 'Processing...';
+                this.disabled = true;
+                
+                setTimeout(() => {
+                    this.textContent = 'Process Data';
+                    this.disabled = false;
+                    reportOutput.style.display = 'block';
+                    
+                    // Scroll to the report
+                    reportOutput.scrollIntoView({ behavior: 'smooth' });
+                }, 1500);
+            } else {
+                alert('Please select a file to process.');
+            }
+        });
+        
+        document.getElementById('exportReport').addEventListener('click', function() {
+            alert('Report exported successfully!');
+        });
+    </script>
 
 </body>
 </html>
